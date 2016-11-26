@@ -1,0 +1,26 @@
+<?php
+
+	// configuration
+	require("../includes/config.php");
+	
+	
+	// if form was submitted
+	if($_SERVER["REQUEST_METHOD"] == "POST")
+	{
+		
+		$_POST = lookup($_POST["symbol"]);
+	
+		if($_POST === false)
+		{
+	 		apologize("Unavailalbe to quote stock");
+		}
+		
+		render("../templates/quote.php", ["title" => "Quote"]);
+	}
+	
+	else
+	{
+  	render("quote_form.php", ["title" => "Quote"]);
+	}
+	
+?>

@@ -1,0 +1,47 @@
+0.  
+BMP: 1bit(2 colours), 4bit(16 colours), 8bit(256 colours), true-color: RGB values so 8bit/colours which means 24bit/pixel
+GIF: 8bit(256 colours)
+JPEG: 8bit(256 colours)
+PNG: PNG-8(256 colours), PNG-24(16 million colours), PNG-32 (over 9000)
+1.  Graphics Interchange Format, GIF
+2.  The difference between the two is whether or not, in the compression of a file, all original data can be recovered when the file is decompressed.
+
+    Lossless: every single bit of data that was originally in the file remains after the file is decompressed.
+    Lossy: redundant information is deleted, this is useful because the 'loss' is not always visible with the naked eye. This makes it excellent compression for video formats and pictures.
+
+3.  Only JPEG
+4.  First, the system modifies the filename’s first character in the file’s directory entry to signal that the file has been deleted and that the directory entry can be recycled.
+    Second, the system moves all of the file’s FAT clusters to the hard drive’s list of free clusters.
+    
+5.  There are several methods for that but the most common one is just replacing the file by ASCII NUL's to overwrite existing data.
+
+6.  A 'header's that makes you able to declare the specified widths , or sizes if you will, of certain integer types. 
+
+7.  uint means unsigned and int means signed. So you can specify how much bits each integer type will take up in the memory.
+
+8.  8bits  BYTE;
+    32 bits DWORD;
+    32bits  LONG;
+    16bits WORD;
+    
+9.  4D42h = "BM"
+
+10. bfSize: size of the file itself, thus the image
+    biSize is the size of the BITMAPINFOHEADER structure
+
+11. If biHeight is negative, the bitmap is a top-down DIB and its origin is the upper-left corner (source: MSDN)
+
+12. biBitCount
+
+13. If you did not specify the outputfile's name as a command-line argument
+
+14. You always copy 1 element here, 1 input to 1 output
+
+15. 1 byte
+
+16. It seeks the 9th element of a file and returns it. 
+
+17. Current position of the file pointer.
+
+18. Rick Astley
+

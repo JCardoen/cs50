@@ -1,0 +1,37 @@
+0.  pneumonoultramicroscopicsilicovolcanoconiosis is a
+    pneumoconiosis caused by inhalation of very fine
+    silicate or quartz dust.
+    
+1.  getrusage() returns resource usage measures for a process or processes: such are CPU time and used memory
+
+2.  16 members
+
+3.  If we pass them by value, whole two structures will be copied into 'calculate', that would be stupid as we are wasting time and resources.
+
+4.  After loading a textfile and a dictionary, main() function starts reading a text 
+   symbol-by-symbol, with a goal of constructing separate words. A word is completed
+   when one or more alphabetic symbols are read, and we encounted a non-alphanumeric 
+   character (like spacebar, or newline). Then we check our word for misspellings, 
+   reset the word index to zero, and continue the symbol reading loop. If we encounter 
+   a digit, or a string tends to be too long, we traverse this word in the text, but we
+   won't check it for misspellings.
+
+5.  fgetc reads the file character by character, discriminating vs anything that isn't alphabetical or an apostrophe proceeded by a character. 
+    fscanf reads until white space and stores the array in a buffer, the array may contain commas etc which would cause problems for the misspelling function.
+
+6.  The const type ensures that the initial value of the parameter cannot be modified. 
+    This means that each word we are checking along with the dictionary cannot be changed. 
+    This safety measure is useful as these values should be consistent. 
+    Students are required to write these functions and it is possible that they might accidently alter something they shouldn't.
+
+7.  I used a custom struct called "node" to store individual words from the dictionary. It contains a string and a pointer to another node.
+    In order to load my dictionary, I used a a hashtable where each entry is a header node pointing to the next node of a linked list.
+    I decided to have a large hash table rather than long linked lists, 
+    therefore I felt that sorting the linked list would not improve searches enough when considering the extra load time.
+
+8.  My first correct implementation of spell-check took about 0.15s on austinpowers.txt.
+
+9.  To reduce run times, I tried different hash table sizes until I got one which was approximately optimal.
+
+10. A bottleneck I wasn't able to solve was the hash did not perfectly evenly distribute the hash keys for the dictionary, leading to the need for linked lists and increased traversal time.
+
